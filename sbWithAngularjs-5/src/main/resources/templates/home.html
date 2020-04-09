@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script th:src="@{/main.js}"></script>
+       <script th:src="@{/script.js}"></script>
+      <link th:href="@{/main.css}" rel="stylesheet" />
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+</head>
+
+
+
+
+<body ng-app="myApp">
+
+<div class="row">
+<div class="col-sm-12" >
+<h1>ATS APPLICATION</h1>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12" >
+<!-- <nav class="{{active}}" >
+
+			
+			<a href="#/!">Main</a> ||
+
+			<a href="#!banana">Banana</a> ||
+			<a href="#!tomato">Tomato</a>		
+			
+		</nav> -->
+		<div class="navbar">
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#/!"><i class="fa fa-fw fa-user"></i> Candidate</a> 
+  <a href="#!banana"><i class="fa fa-fw fa-search"></i> Requirement</a> 
+  
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-1" style="height:500px;">
+<!-- <p><a href="#/!">Main</a></p>
+
+<a href="#!banana">Banana</a>
+<a href="#!tomato">Tomato</a> -->
+
+
+</div>
+<div class="col-sm-11" style="height:500px;">
+<div ng-view></div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12" >
+Copyright : www.ivis.net
+</div>
+</div>
+
+
+
+
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "candidate"
+    })
+    .when("/banana", {
+                templateUrl : "requirement"
+    })
+    .when("/tomato", {
+                      templateUrl : "blue.htm"
+    });
+});
+</script>
+
+</body>
+</html>

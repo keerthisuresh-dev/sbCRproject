@@ -1,0 +1,57 @@
+<!--  <!DOCTYPE html>
+<html lang="en" data-ng-app="app" ng-controller="AppCtrl">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Angular PDF.js demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script th:src="@{/server.js}"></script>
+<script th:src="@{/min.css}"></script>
+<script th:src="@{/scipt.js}"></script>
+<!------ Include the above in your HEAD tag ---------->
+<!--  <body>
+<div class="container">
+	<div class="row">
+		<h2>PDF in modal preview using Easy Modal Plugin</h2>
+        <a class="btn btn-primary view-pdf" href="http://localhost:8080/37014c8f-6004-432f-92d7-57c8add074ef">View PDF</a>        
+	</div>
+</div>
+-->
+     
+    </body>
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app" ng-controller="AppCtrl">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>View PDF</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" href="A - Cover Page.pdf" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">A - Cover Page</button>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+          <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>        
+         <div class="modal-body">
+          <p>Some text in the modal.</p>
+           <iframe src="http://localhost:8080//download/Employment_Agreement_of_Keerthi_Suresh.pdf/db"></iframe>  
+        </div> 
+      </div>
+    </div>
+  </div>
+ </div>
+</body>
+</html>
